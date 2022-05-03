@@ -1,12 +1,12 @@
 Host hpc
   HostName rider.case.edu
-  User yourCaseId
+  User CaseId
 
 # This is usefull only in intractive mode.
 # If you want to use GUI in your connection use it, otherwise use ssh w/o x11 flag.
 Host hpc-x11
   HostName rider.case.edu
-  User yourCaseId
+  User CaseId
   ForwardX11 yes
 
 
