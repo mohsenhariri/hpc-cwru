@@ -2,7 +2,7 @@
 
 Templates for sbatch and srun.
 
-Should you have any questions, always feel free to contact [me](mxh1029@case.edu).
+Should you have any questions, always feel free to contact [me](mailto:mxh1029@case.edu).
 
 | FLAG          | Meaning        | Type                                         | Example           |
 | ------------- | -------------- | -------------------------------------------- | ----------------- |

@@ -12,7 +12,7 @@ batchCPU1:
 		sbatch job.slurm
 
 batchCPU2:
-		sbatch -N 1 -n 6 --mem=16gb  --time=12:00:00 --pty /bin/bash
+		sbatch -N 1 -n 6 --mem=16gb  --time=12:00:00 job.slurm
 
 
 batchCPU1:
@@ -22,7 +22,7 @@ batchGPU1:
 		sbatch
 
 batchGPU2:
-		sbatch
+		sbatch -p gpu -C gpup100 --gres=gpu:2 --exclusive --mem=0 job.slurm
 
 srunCPU1:
 		srun --pty /bin/bash
