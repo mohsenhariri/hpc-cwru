@@ -1,12 +1,25 @@
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githubKey
+
 Host hpc
   HostName rider.case.edu
   User CaseId
+  IdentityFile ~/.ssh/id_hpc_ed25519
 
-# This is usefull only in intractive mode.
+Host hpc-pioneer
+  HostName pioneer.case.edu
+  User CaseId
+  IdentityFile ~/.ssh/pioneerKey
+
+
+# This is useful only in interactive mode.
 # If you want to use GUI in your connection use it, otherwise use ssh w/o x11 flag.
 Host hpc-x11
   HostName rider.case.edu
   User CaseId
+  IdentityFile ~/.ssh/id_hpc_ed25519
   ForwardX11 yes
 
 
