@@ -1,7 +1,7 @@
 #!/bin/bash
 # Python virtual environment ✅
 # requirements.txt ✅
-# GPU ❌
+# GPU ✅
 
 module purge
 module load gcc openmpi

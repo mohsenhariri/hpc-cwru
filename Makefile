@@ -1,22 +1,17 @@
 ID := caseID
 SESSION := session_name
 
-
 transferLocalToHPC:
-		rsync -avz /home/$USER/pathOnLocal -e ssh --progress  $(ID)@rider.case.edu:/home/$(ID)/pathOnHPC
+		rsync -avz /home/$(USER)/pathOnLocal -e ssh --progress  $(ID)@rider.case.edu:/home/$(ID)/pathOnHPC
 
 transferHPCToLocal:
-		rsync -arvz -e ssh --progress $(ID)@rider.case.edu:/home/$(ID)/pathOnHPC /home/$USER/pathOnLocal
+		rsync -arvz -e ssh --progress $(ID)@rider.case.edu:/home/$(ID)/pathOnHPC /home/$(USER)/pathOnLocal
 
 batchCPU1:
 		sbatch job.slurm
 
 batchCPU2:
 		sbatch -N 1 -n 6 --mem=16gb  --time=12:00:00 job.slurm
-
-
-batchCPU1:
-		sbatch 
 
 batchGPU1:
 		sbatch
@@ -38,8 +33,6 @@ srunGPU2:
 
 srunGPUExculive:
 		srun -p gpu -C gpup100 --gres=gpu:2 --exclusive --mem=0 --pty /bin/bash 
-
-
 
 srunIntractive:
 		srun --x11 -N 1 -n 6 --mem=16gb -p gpu -C gpup100 --gres=gpu:1 --time=12:00:00 --pty /bin/bash 
