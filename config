@@ -14,8 +14,8 @@ Host hpc-pioneer
   IdentityFile ~/.ssh/pioneerKey
 
 
-# This is useful only in interactive mode.
-# If you want to use GUI in your connection use it, otherwise use ssh w/o x11 flag.
+# The next setup is useful only in interactive mode.
+# If you want to use GUI in your connection consider it, otherwise use ssh w/o x11 flag.
 Host hpc-x11
   HostName rider.case.edu
   User CaseId
